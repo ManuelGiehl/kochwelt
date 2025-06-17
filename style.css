@@ -1,3 +1,56 @@
 body {
-    background-color: white;
+    margin: 0px;
+    max-width: 1440px;
+    margin-left: 320px;
+    
+}
+
+.cheesecake-content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.cheesecake-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.cheesecake-content p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    display: flex;
+    text-align: justify;
+}
+
+.cheesecake {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 160px;
+}
+
+
+.cheesecake-image img {
+    width: 700px;
+    border-radius: 16px;
+    
+}
+
+button {
+    background-color: #008000;
+    color: #fff;
+    font-size: 24px;
+    padding: 18px 80px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 100px;
+    
+    font-family: 'Raleway', sans-serif;
 }

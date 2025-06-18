@@ -1,46 +1,127 @@
 body {
     margin: 0px;
     max-width: 1440px;
-    margin-left: 320px;
-    
-}
-
-.cheesecake-content {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    color: black;
+    background-color: white;
+  
+  }
+  
+  main {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  
+  .cheesecake-content {
     margin-top: 0;
     padding-top: 0;
-}
-
-.cheesecake-content h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
+  }
+  
+  .cheesecake-content h1 {
+    font-size: 40px;
+    font-weight: 500;
     color: #000;
     margin-bottom: 32px;
     margin-top: 0;
-}
-
-.cheesecake-content p {
-    font-family: 'Raleway', sans-serif;
+  }
+  
+  .cheesecake-content p {
     font-size: 24px;
     font-weight: 400;
     color: #000;
     display: flex;
     text-align: justify;
-}
-
-.cheesecake {
+  }
+  
+  .cheesecake {
     display: flex;
     align-items: flex-start;
     gap: 40px;
     margin-top: 160px;
-}
-
-
-.cheesecake-image img {
+  }
+  
+  .cheesecake-image img {
     width: 700px;
     border-radius: 16px;
-    
-}
+  }
+  
+  button {
+    background-color: #008000;
+    color: #fff;
+    font-size: 24px;
+    padding: 18px 80px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 100px;
+  }
+  
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 160px;
+    padding-right: 160px;
+    margin-top: 110px;
+    padding-top: 24px;
+    padding-bottom: 64px;
+    background-color: #efefef;
+  }
+  
+  .recipes h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 48px;
+  }
+  
+  .recipe-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 150px;
+  }
+  
+  .recipe-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  
+  }
+  
+  .recipe-item img {
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  
+  .recipe-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  
+  }
+  
+  @media (max-width: 1400px) {
+    .recipe-item img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .recipe-list {
+      gap: 100px;
+    }
+  
+    .recipe-item h3 {
+      font-size: 16px;
+    }
+  }
 
 button {
     background-color: #008000;
@@ -54,3 +135,23 @@ button {
     
     font-family: 'Raleway', sans-serif;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #3a3a3a;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding-left: 160px;
+    padding-right: 160px;
+    }
+    
+    nav a {
+    text-decoration: none;
+    font-size: 24px;
+    justify-content: space-evenly;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: black;
+    font-weight: 500;
+    }

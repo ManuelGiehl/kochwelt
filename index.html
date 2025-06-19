@@ -6,25 +6,28 @@
     <title>Kochwelt</title>
     <link rel="icon" type="img/png" href="./img/logo_small.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<header>
-    
-    <img src="./img/logo.png">
-    <nav>
-        <a href="#">Start</a>
-        <a href="#">Rezept des Tages</a>
-        <a href="#">Kontakt</a>
-        <a href="#">Impressum</a>
-    </nav>
-</header>
-
 <body>
+  <div class="site-container">
+    <header>
+        <a href="index.html">
+            <img src="./img/logo.png">
+        </a>
+        <nav>
+            <a href="#">Start</a>
+            <a href="#">Rezept des Tages</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Impressum</a>
+        </nav>
+        <div class="header-shadow"></div>
+    </header>
     <main>
-        <div class="cheesecake">
+        <section class="cheesecake">
             <div class="cheesecake-image">
                 <img src="img/cheesecake.png" alt="American Cheesecake">
             </div>
@@ -33,32 +36,59 @@
                 <p>Der cremige American Cheesecake ist ein beliebter Klassiker aus den USA.
                     Mit seinem knusprigen Keksboden und der feinen Frischkäsefüllung lässt er
                     sich ganz einfach selbst zubereiten. In etwa 30 Minuten Vorbereitungszeit
-                    zauberst du ein herrlich süßes Dessert für jede Gelegenheit.</p>
-                <a href="cheesecake.html" target="_blank">
-                    <button>Rezept öffnen</button>
-                    <div>
-                        online geändert
-                    </div>
-                </a>
+                    zauberst du ein herrlich süßes Dessert für jede Gelegenheit.</p>  
+               
+                    <button id="cheesecakeBtn">Rezept öffnen</button>
             </div>
-        </div>
-    </main>
+        </section>
+    
     <section class="recipes">
+      <div class="recipes-inner">
         <h2>Weitere leckere Rezepte:</h2>
         <div class="recipe-list">
-            <a class="recipe-item" href="#">
-                <img src="img/Schokoladenkuchen.jpg" alt="Rezept 1">
-                <h3>Schokoladenkuchen</h3>
-            </a>
-            <a class="recipe-item" href="#">
-                <img src="img/croissant.jpg" alt="Rezept 2">
-                <h3>Kuchen 2</h3>
-            </a>
-            <a class="recipe-item" href="#">
-                <img src="img/croissant.jpg" alt="Rezept 3">
-                <h3>Kuchen 3</h3>
-            </a>
+          <a class="chocolate-cake" href="#">
+            <img src="img/Schokoladenkuchen.jpg" alt="Rezept 1">
+            <h3>Schokoladenkuchen</h3>
+          </a>
+          <a class="strawberry-cake" href="#">
+            <img src="img/erdbeerkuchen.jpg" alt="Rezept 2">
+            <h3>Erdbeerkuchen</h3>
+          </a>
+          <a class="carrot-cake" href="#">
+            <img src="img/karottenkuchen.jpg" alt="Rezept 3">
+            <h3>Karottenkuchen</h3>
+          </a>
         </div>
+      </div>
+    </section>
+
+    <section class="cake-vs-torte">
+      <div class="cake-vs-torte-header">
+        <h2 class="cake-vs-torte-title">
+          Kuchen vs. Torten – Was ist der Unterschied?
+        </h2>
+      </div>
+      <div class="cake-vs-torte-content">
+        <div class="cake-vs-torte-text">
+          <p>
+            Kuchen oder Torte? Der Unterschied liegt im Aufbau: Kuchen sind
+            einfache Gebäckstücke aus einer Teigart (z. B. Rührkuchen), während
+            Torten aus mehreren Schichten mit Creme-Füllungen und aufwendiger
+            Deko bestehen. Ideal für besondere Anlässe!
+          </p>
+        </div>
+        <div class="cake-vs-torte-image">
+          <img
+            src="./img/cake_torte.jpg"
+            class="cake-torte-img"
+            alt="Kuchen und Torte im Vergleich"
+          />
+        </div>
+      </div>
+      </section>
+    </main>
+  </div>
 </body>
+<footer ></footer>
 
 </html>

@@ -1,152 +1,182 @@
 body {
-    margin: 0px;
-    max-width: 1440px;
+    margin: 0;
     width: 100%;
     font-family: "Raleway", sans-serif;
     color: black;
     background-color: white;
-  
-  }
-  
-  main {
-    padding-left: 160px;
-    padding-right: 160px;
-  }
-  
-  .cheesecake-content {
+    overflow-x: hidden;
+}
+
+.site-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: clamp(4px, 6vw, 24px);
+    padding-right: clamp(4px, 6vw, 24px);
+}
+
+@media (max-width: 400px) {
+    .site-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+header, main, .recipes, .cheesecake {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+main {
+    width: 100%;
+}
+
+.cheesecake-content {
     margin-top: 0;
     padding-top: 0;
-  }
-  
-  .cheesecake-content h1 {
+}
+
+.cheesecake-content h1 {
     font-size: 40px;
     font-weight: 500;
     color: #000;
-    margin-bottom: 32px;
     margin-top: 0;
-  }
-  
-  .cheesecake-content p {
+}
+
+.cheesecake-content p {
     font-size: 24px;
     font-weight: 400;
     color: #000;
-    display: flex;
     text-align: justify;
-  }
-  
-  .cheesecake {
+   
+}
+
+.cheesecake-content a {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+}
+
+.cheesecake {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
-    margin-top: 160px;
-  }
-  
-  .cheesecake-image img {
-    width: 700px;
+    margin-top: 120px;
+}
+
+.cheesecake-image img {
+    max-width: 550px;
+    min-width: 0;
+    height: auto;
     border-radius: 16px;
-  }
-  
-  button {
+    object-fit: cover;
+    display: block;
+}
+
+button {
     background-color: #008000;
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     padding: 18px 80px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    margin-top: 100px;
-  }
-  
-  .recipes {
+    margin-top: 40px;
+}
+
+.recipes {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #efefef;
+    padding-top: 24px;
+    padding-bottom: 64px;
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.recipes-inner {
+    max-width: 1440px;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-left: 160px;
-    padding-right: 160px;
-    margin-top: 110px;
-    padding-top: 24px;
-    padding-bottom: 64px;
-    background-color: #efefef;
-  }
-  
-  .recipes h2 {
+}
+
+.recipes h2 {
     font-size: 36px;
     font-weight: 500;
     color: #000;
     margin-bottom: 48px;
-  }
-  
-  .recipe-list {
+}
+
+.recipe-list {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 150px;
-  }
-  
-  .recipe-item {
+    max-width: 100%;
+    gap: 60px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.chocolate-cake,
+.strawberry-cake,
+.carrot-cake {
     display: flex;
     flex-direction: column;
     text-align: center;
     text-decoration: none;
     color: black;
-  
-  }
-  
-  .recipe-item img {
+}
+
+.chocolate-cake img,
+.strawberry-cake img,
+.carrot-cake img {
     width: 300px;
     height: 300px;
-    border-radius: 16px;
     object-fit: cover;
-  }
-  
-  .recipe-item h3 {
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.chocolate-cake h3,
+.strawberry-cake h3,
+.carrot-cake h3 {
     font-size: 24px;
     font-weight: 500;
     margin-top: 8px;
     margin-bottom: 32px;
-  
-  }
-  
-  @media (max-width: 1400px) {
-    .recipe-item img {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .recipe-list {
-      gap: 100px;
-    }
-  
-    .recipe-item h3 {
-      font-size: 16px;
-    }
-  }
+}
 
-button {
-    background-color: #008000;
-    color: #fff;
-    font-size: 24px;
-    padding: 18px 80px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-top: 100px;
-    
-    font-family: 'Raleway', sans-serif;
+.chocolate-cake:hover,
+.strawberry-cake:hover,
+.carrot-cake:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 header {
+    min-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px solid #3a3a3a;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding-left: 160px;
-    padding-right: 160px;
-    }
-    
-    nav a {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 16px;
+}
+
+nav a {
     text-decoration: none;
     font-size: 24px;
     justify-content: space-evenly;
@@ -154,4 +184,378 @@ header {
     padding-right: 12px;
     color: black;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #008000;
+}
+
+nav {
+    padding-bottom: 12px;
+}
+
+.header-shadow {
+    width: 100vw;
+    height: 12px;
+    box-shadow: 0 8px 10px 0 #efefef;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    pointer-events: none;
+    background: transparent;
+    z-index: 1;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Standard: Spalte (mobile & tablet) */
+.cheesecake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 120px;
+}
+
+/* Ab 900px: Reihe, alles skaliert mit */
+@media (min-width: 900px) {
+    .cheesecake {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
     }
+    .cheesecake-image {
+        flex: 0 1 40vw;
+        max-width: 400px;
+        min-width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-width: 0;
+    }
+    .cheesecake-content {
+        flex: 1 1 0;
+        min-width: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cheesecake-content h1 {
+        font-size: clamp(24px, 2.5vw, 40px);
+    }
+    .cheesecake-content p {
+        font-size: clamp(14px, 1.2vw, 22px);
+    }
+    .cheesecake-content button {
+        align-self: flex-start;
+        margin-top: 32px;
+        font-size: clamp(14px, 1.2vw, 22px);
+        padding: 14px 40px;
+    }
+}
+
+/* Desktop: Reihe */
+@media (min-width: 1068px) {
+    .cheesecake,
+    .recipe-list {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+}
+
+/* Text- und Button-Zentrierung auf Tablet */
+@media (min-width: 768px) and (max-width: 1067px) {
+    .cheesecake-content {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .cheesecake-content button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: row;
+        align-items: flex-end;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        gap: 16px;
+        min-height: 90px;
+    }
+    .site-container header img {
+        padding-left: 24px;
+        margin-bottom: 0;
+        margin-left: 0;
+        position: relative;
+        z-index: 2;
+    }
+    nav {
+        padding-bottom: 0;
+    }
+    nav a {
+        display: block;
+        padding: 8px 0;
+        font-size: 20px;
+    }
+}
+
+.site-container header img {
+    box-sizing: border-box;
+    position: relative;
+    width: 320px;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.site-container header img:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 320px) and (max-width: 1067px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1068px) {
+    nav {
+        display: flex;
+    }
+}
+
+@media (min-width: 1067px) {
+    .recipe-list {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 40px;
+    }
+    .chocolate-cake,
+    .strawberry-cake,
+    .carrot-cake {
+        flex: 1 1 0;
+        min-width: 180px;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chocolate-cake img,
+    .strawberry-cake img,
+    .carrot-cake img {
+        width: 100%;
+        max-width: 300px;
+        min-width: 120px;
+        object-fit: cover;
+    }
+    .chocolate-cake h3,
+    .strawberry-cake h3,
+    .carrot-cake h3 {
+        font-size: clamp(16px, 1.5vw, 24px);
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+    .cheesecake-image {
+        flex: 0 1 40vw;
+        max-width: 550px;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-image img {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1439px) {
+    .cheesecake-content p {
+        font-size: clamp(16px, 2vw, 24px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .cheesecake-content p {
+        font-size: clamp(16px, 1.5vw, 22px);
+    }
+    .cheesecake-content h1 {
+        font-size: clamp(28px, 3vw, 40px);
+    }
+    .cheesecake-content button {
+        font-size: clamp(16px, 1.5vw, 22px);
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1067px) {
+    .cheesecake {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .cheesecake-image {
+        max-width: 400px;
+        width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-image img {
+        width: 100%;
+        max-width: 400px;
+        min-width: 0;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .cheesecake-content {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-content h1,
+    .cheesecake-content p {
+        text-align: center;
+    }
+    .cheesecake-content button {
+        align-self: center;
+    }
+    .recipe-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 1068px) and (max-width: 1439px) {
+    .cheesecake-content p {
+        font-size: 22px;
+    }
+    .cheesecake-content h1 {
+        font-size: 40px;
+    }
+    .cheesecake-content button {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 460px) {
+    .chocolate-cake img,
+    .strawberry-cake img,
+    .carrot-cake img {
+        width: 100%;
+        max-width: clamp(120px, 60vw, 300px);
+        min-width: 80px;
+        height: clamp(120px, 60vw, 300px);
+        object-fit: cover;
+    }
+    .chocolate-cake h3,
+    .strawberry-cake h3,
+    .carrot-cake h3 {
+        font-size: clamp(12px, 5vw, 20px);
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .recipes h2 {
+        font-size: clamp(16px, 7vw, 36px);
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 48px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.header-shadow {
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    header img {
+        width: clamp(80px, 70vw, 350px);
+        height: auto;
+    }
+}
+
+/* CSS Teilabschnitt Mohamed */
+.cake-vs-torte {
+  padding-left: 160px;
+  padding-right: 160px;
+  margin-top: 110px;
+  padding-top: 24px;
+  padding-bottom: 64px;
+}
+
+.cake-vs-torte-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.cake-vs-torte-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.cake-vs-torte-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.cake-vs-torte-text {
+  flex: 1;
+}
+
+.cake-vs-torte-text p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  line-height: 1.4;
+  margin: 0;
+  text-align: justify;
+
+}
+
+.cake-vs-torte-image {
+  flex-shrink: 0;
+}
+
+.cake-torte-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #403b3b;
+  height: 200px;  
+  width: 100%;
+}

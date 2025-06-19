@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Kochwelt</title>
+    <link rel="icon" type="img/png" href="./img/logo_small.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-container">
+    <header>
+        <a href="index.html">
+            <img src="./img/logo.png" alt="Kochwelt Logo">
+        </a>
+        <nav>
+            <a href="index.html">Start</a>
+            <a href="cheesecake.html">Rezept des Tages</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="impressum.html">Impressum</a>
+        </nav>
+        <div class="header-shadow"></div>
+    </header>
+    <main>
+      <div class="contact-container">
+        <h1>Kontakt</h1>
+        <form class="contact-form" action="mailto:manuzcore1@gmail.com" method="POST" enctype="text/plain">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Absenden</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <footer></footer>
+</body>
+</html>

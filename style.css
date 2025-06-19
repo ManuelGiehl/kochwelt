@@ -42,13 +42,14 @@ main {
     font-weight: 500;
     color: #000;
     margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .cheesecake-content p {
     font-size: 24px;
     font-weight: 400;
     color: #000;
-    text-align: justify;
+
    
 }
 
@@ -503,8 +504,6 @@ nav {
 
 /* CSS Teilabschnitt Mohamed */
 .cake-vs-torte {
-  padding-left: 160px;
-  padding-right: 160px;
   margin-top: 110px;
   padding-top: 24px;
   padding-bottom: 64px;
@@ -526,10 +525,13 @@ nav {
   display: flex;
   align-items: center;
   gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .cake-vs-torte-text {
   flex: 1;
+  padding-top: 24px;
 }
 
 .cake-vs-torte-text p {
@@ -539,7 +541,6 @@ nav {
   text-align: left;
   line-height: 1.4;
   margin: 0;
-  text-align: justify;
 
 }
 

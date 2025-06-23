@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktformular</title>
+    <title>Kontakt | Kochwelt</title>
+    <link rel="icon" type="img/png" href="./img/logo_small.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="img/png" href="./img/logo_small.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <div class="site-container">
     <header>
-        <a href="index.html"><img src="./img/logo.png" alt="Kochwelt Logo"></a>
+        <a href="index.html">
+            <img src="./img/logo.png" alt="Kochwelt Logo">
+        </a>
         <nav>
             <a href="index.html">Start</a>
-            <a href="#">Rezept des Tages</a>
+            <a href="cheesecake.html">Rezept des Tages</a>
             <a href="contact.html">Kontakt</a>
-            <a href="#" target="_blank">Impressum</a>
+            <a href="impressum.html">Impressum</a>
         </nav>
+        <div class="header-shadow"></div>
     </header>
-    <main class="main-content-contact">
-        <div class="contact-formular">
-            <form>
-                <h2>Kontaktiere uns</h2>
-                <label for="name">Dein Name:</label>
-                <input type="text" id="name" name="name" required>
+    <main>
+      <div class="contact-container">
+        <h1>Kontakt</h1>
+        <form class="contact-form" action="mailto:manuzcore1@gmail.com" method="POST" enctype="text/plain">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
 
-                <label for="email">Deine E-Mail:</label>
-                <input type="email" id="email" name="email" required>
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required>
 
-                <label for="message">Deine Nachricht:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
-                <div class="button-contact">
-                <button type="submit">Abschicken</button>
-                </div>
-            </form>
-        </div>
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Absenden</button>
+        </form>
+      </div>
     </main>
   </div>
-  <footer></footer>
+  <footer>
+    <p>© 2025 Kochwelt</p>
+  </footer>
 </body>
 </html>

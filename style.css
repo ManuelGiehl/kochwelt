@@ -1146,3 +1146,206 @@ footer {
     width: 196px;
     object-fit: cover;
 }
+
+
+.strawberrycake-main {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.strawberrycake-main img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: none;
+}
+
+.strawberrycake-h1 {
+    font-weight: 600;
+    padding-top: 56px;
+    font-size: 42px;
+
+}
+
+.strawberrycake-icon-data {
+    display: flex;
+    padding-top: 36px;
+    gap: 24px;
+}
+
+.strawberrycake-icon-data img {
+    height: 18px;
+    width: auto;
+}
+
+.strawberrycake-icon-data span {
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.strawberrycake-icon-container {
+    display: flex;
+    gap: 12px;
+    background-color: #efefef;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.strawberrycake-portions-field {
+    margin-top: 76px;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 350;
+    display: flex;
+    border-radius: 8px;
+    border: none;
+    height: 64px;
+    align-items: center;
+}
+
+.strawberrycake-ingredients-container label {
+    padding-right: 18px;
+}
+
+.strawberrycake-ingredients-container input {
+    border-radius: 8px;
+    border: none;
+    height: 38px;
+    font-size: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.strawberrycake-ingredients-container button {
+    height: 42px;
+    width: 194px;
+    font-size: 20px;
+    background-color: rgb(0, 128, 0);
+    color: white;
+    border: none;
+}
+
+.strawberrycake-ingredients-container button:hover {
+    cursor: pointer;
+    background-color: rgb(40, 123, 40);
+}
+
+.strawberrycake-ingredients-container {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.ingredients-list {
+    padding-inline-start: 0;
+}
+
+.ingredients-div {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 36px;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.strawberrycake-ingredients-crowd {
+    width: 240px;
+    padding-right: 16px;
+}
+
+.ingredients-div:nth-child(odd) {
+    background-color: rgb(239, 239, 239);
+}
+
+.ingredients-div:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.strawberrycake-h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.strawberrycake-preparation {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.strawberrycake-h2 {
+    font-size: 34px;
+    font-weight: 600;
+    padding-top: 12px;
+}
+
+.strawberrycake-preparation-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.strawberrycake-preparation-icons img {
+    height: 18px;
+}
+
+.strawberrycake-preparation-icons span {
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.strawberrycake-preparation-icons-time {
+    display: flex;
+    gap: 12px;
+    background-color: #efefef;
+    border-radius: 10px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 36px;
+    margin-bottom: 24px;
+}
+
+.strawberrycake-preparation p {
+    font-size: 20px;
+    font-weight: 350;
+    padding-top: 36px;
+    padding-bottom: 68px;
+    margin: 0;
+}
+
+.strawberrycake-profil-container img {
+    height: 96px;
+    border-radius: 48px;
+    margin-top: 24px;
+}
+
+.strawberrycake-profil-container {
+    display: flex;
+}
+
+.strawberrycake-profil-container span {
+    font-size: 24px;
+    font-weight: 350;
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    margin-top: 24px;
+}
+
+.strawberrycake-footer {
+    background-color: rgb(64, 59, 59);
+    height: 240px;
+    margin-top: 136px;
+}
+

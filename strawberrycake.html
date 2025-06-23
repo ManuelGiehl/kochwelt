@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept des Tages</title>
+    <link rel="stylesheet" href="styleRezept.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="img/png" href="./img/logo_small.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="./img/logo.png" alt="Kochwelt Logo"></a>
+        <nav>
+            <a href="index.html">Start</a>
+            <a href="rezept.html">Rezept des Tages</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="imressum.html" target="_blank">Impressum</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Erdbeerkuchen</h1>
+        <img src="./img/erdbeerkuchen.jpg" class="mainImg">
+
+
+        <div class="icon-data">
+            <div class="icon-container">
+                <img src="./img/clock-regular.svg">
+                <span>40 Min.</span>
+            </div>
+            <div class="icon-container">
+                <img src="./img/brain-solid.svg">
+                <span>Normal</span>
+            </div>
+            <div class="icon-container">
+                <img src="./img/calendar-alt-regular.svg">
+                <span>18.06.2025</span>
+            </div>
+        </div>
+    </main>
+
+    <section class="zutaten">
+        <div class="portionsField">
+            <label for="portionsInput">Zutaten für</label>
+            <input type="number" id="portionsInput" value="1" min="1">
+            <button onclick="aktualisiereZutaten()">Portionen</button>
+        </div>
+        <h3>Für den Boden:</h3>
+        <ul class="zutatenListe">
+            <li class="zutatDiv">
+                <span class="menge">125 g</span>
+                <span class="zutat">Zucker</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">&frac12 Pck.</span>
+                <span class="zutat">Vanillezucker</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">2</span>
+                <span class="zutat">Eier</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">60 ml</span>
+                <span class="zutat">Öl</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">75 ml</span>
+                <span class="zutat">Orangenlimonade</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">125 g</span>
+                <span class="zutat">Mehl</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">1 &frac12 TL, gehäuft</span>
+                <span class="zutat">Backpulver</span>
+            </li>
+        </ul>
+        <h3>Für den Belag:</h3>
+        <ul class="zutatenListe">
+            <li class="zutatDiv">
+                <span class="menge">300 ml</span>
+                <span class="zutat">Sahne</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">200 ml</span>
+                <span class="zutat">Schmand</span>
+                </tr>
+            <li class="zutatDiv">
+                <span class="menge">1 Pck.</span>
+                <span class="zutat">Vanillezucker</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">1 Pck.</span>
+                <span class="zutat">Cremepulver &#040Paradiescreme Vanille&#41</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">&frac34 kg</span>
+                <span class="zutat">Erdbeeren</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">&frac12 Pck.</span>
+                <span class="zutat">Tortenguss rot</span>
+            </li>
+            <li class="zutatDiv">
+                <span class="menge">n. B.</span>
+                <span class="zutat">Wasser</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="preparation">
+        <h2>Zubereitung</h2>
+
+        <div class="icon-time">
+            <div class="iconTime">
+                <img src="./img/clock-regular.svg">
+                <span>Arbeitszeit ca. 40 Minuten</span>
+            </div>
+            <div class="iconTime">
+                <img src="./img/clock-regular.svg">
+                <span>Ruhezeit ca. 1 Stunde</span>
+            </div>
+            <div class="iconTime">
+                <img src="./img/clock-regular.svg">
+                <span>Koch-/Backzeit ca. 25 Minuten</span>
+            </div>
+            <div class="iconTime">
+                <img src="./img/clock-regular.svg">
+                <span>Gesamtzeit ca. 2 Stunden 5 Minuten</span>
+            </div>
+        </div>
+
+
+        <p>Die Mengen in der Zutatenliste sind für eine 26er Springform. Für ein Blech die Zutaten verdoppeln.
+            <br>
+            <br>
+            Für den Boden die Eier mit dem Zucker und dem Vanillezucker verrühren. Öl, Orangenlimonade, Mehl und
+            Backpulver hinzufügen. Den Teig in der mit Backpapier ausgelegten Springform verteilen und bei 180 °C
+            Ober-/Unterhitze im vorgeheizten Ofen 25 Minuten backen.
+            <br>
+            <br>
+            Für den Belag die Sahne mit dem Cremepulver und Vanillezucker 3 Minuten schlagen (die Masse wird relativ
+            fest). Den Schmand unterheben und die Vanillecreme auf den erkalteten Boden streichen.
+            <br>
+            <br>
+            Die gewaschenen und entstielten Erdbeeren (große sollten halbiert werden) auf der Vanillecreme verteilen.
+            Den Tortenguss nach Packungsanweisung mit dem Wasser anrühren, kochen und anschließend über den Erdbeeren
+            verteilen. Fest werden lassen und dann ist der Kuchen servierfertig.
+        </p>
+
+        <h3>Rezept erstellt von</h3>
+
+        <div class="profil-container">
+            <img src="./img/profile.png">
+            <span>Marcel</span>
+        </div>
+    </section>
+
+    <footer></footer>
+</body>
+
+</html>

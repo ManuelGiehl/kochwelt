@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kochwelt-Schokoladenkuchen</title>
+    <title>Schokoladenkuchen | Kochwelt</title>
+    <link rel="icon" type="img/png" href="./img/logo_small.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <footer>
-        <p>© 2025 Kochwelt</p>
-    </footer>
+  <div class="site-container">
+    <header>
+        <a href="index.html">
+            <img src="./img/logo.png" alt="Kochwelt Logo">
+        </a>
+        <nav>
+            <a href="index.html">Start</a>
+            <a href="">Rezept des Tages</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="impressum.html">Impressum</a>
+        </nav>
+        <div class="header-shadow"></div>
+    </header>
+    <main>
+      <section class="cheesecake-detail">
+        <h1>Schokoladenkuchen</h1>
+        <img class="cheesecake-detail-hero" src="img/Schokoladenkuchen.jpg" alt="Schokoladenkuchen">
+        <div class="cheesecake-detail-info">
+          <span class="cheesecake-meta"><img src="img/icons/clock-regular.svg" alt="Zeit"> 30 Min.</span>
+          <span class="cheesecake-meta"><img src="img/icons/brain-solid.svg" alt="Schwierigkeit"> simpel</span>
+          <span class="cheesecake-meta"><img src="img/icons/calendar-alt-regular.svg" alt="Datum"> 19.06.2025</span>
+        </div>
+        
+        <div class="cheesecake-portion-control">
+          <label for="portionInput">Zutaten für </label>
+          <input id="portionInput" type="number" min="1" value="4">
+          <button id="portionBtn" type="button">Portionen</button>
+        </div>
+        <ul class="cheesecake-ingredients-list">
+          <li data-base-amount="200" data-unit="g">200g Butterkekse</li>
+          <li data-base-amount="100" data-unit="g">100g Butter (geschmolzen)</li>
+          <li data-base-amount="600" data-unit="g">600g Frischkäse</li>
+          <li data-base-amount="200" data-unit="g">200g Schmand</li>
+          <li data-base-amount="150" data-unit="g">150g Zucker</li>
+          <li data-base-amount="3" data-unit="">3 Eier</li>
+          <li data-base-amount="1" data-unit="">1 Päckchen Vanillezucker</li>
+          <li data-base-amount="1" data-unit="">1 EL Speisestärke</li>
+          <li data-base-amount="1" data-unit="">1 Bio-Zitrone (Abrieb und Saft)</li>
+        </ul>
+        <h2>Zubereitung</h2>
+        <div class="cheesecake-detail-info">
+            <span class="cheesecake-meta"><img src="img/icons/clock-regular.svg" alt="Zeit"> Gesamtzeit: ca. 30 Min.</span>
+        </div>
+        <ol class="cheesecake-preparation">
+          <li>Butterkekse fein zerbröseln und mit der geschmolzenen Butter vermengen. Die Masse in eine Springform drücken und kaltstellen.</li>
+          <li>Frischkäse, Schmand, Zucker, Vanillezucker, Eier, Speisestärke, Zitronenabrieb und -saft zu einer glatten Masse verrühren.</li>
+          <li>Die Creme auf den Keksboden geben und im vorgeheizten Ofen bei 170°C (Ober-/Unterhitze) ca. 50 Minuten backen.</li>
+          <li>Den Kuchen im Ofen abkühlen lassen, dann mindestens 4 Stunden (besser über Nacht) kaltstellen.</li>
+        </ol>
+        <div class="cheesecake-author-section">
+          <h3>Rezept erstellt von</h3>
+          <div class="cheesecake-author">
+            <img src="img/profile.png" alt="Profilbild">
+            <span>Adam</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>© 2025 Kochwelt</p>
+  </footer>
 </body>
 </html>

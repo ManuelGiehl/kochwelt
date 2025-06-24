@@ -34,6 +34,13 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .site-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
 header, main, .recipes, .cheesecake {
     padding-left: 0;
     padding-right: 0;
@@ -88,6 +95,12 @@ button {
     border-radius: 2px;
     cursor: pointer;
     margin-top: 40px;
+}
+
+button:hover {
+    background-color: #005c00;
+    transform: scale(1.05);
+    transition: transform 0.3s, background 0.3s;
 }
 
 .recipes {
@@ -181,6 +194,7 @@ header {
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     font-size: 24px;
     padding-left: 12px;
@@ -190,8 +204,28 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #008000;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 5px;
+    background: #008000;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    opacity: 1;
 }
 
 nav {
@@ -685,28 +719,53 @@ footer {
 }
 
 .cheesecake-portion-control {
-    gap: 8px;
-    margin-bottom: 16px;
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 24px;
+    margin-top: 40px;
+}
+
+.cheesecake-portion-control label {
+    margin-right: 16px;
+    font-size: 1.15rem;
 }
 
 .cheesecake-portion-control input[type="number"] {
-    width: 48px;
-    padding: 6px;
-    font-size: 16px;
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    margin: 0 4px;
+    width: 170px;
+    height: 40px;
+    font-size: 1.15rem;
+    text-align: left;
+    border-radius: 8px;
+    border: 2px solid rgba(0,0,0,0.13);
+    border-right: none;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    background: #fff;
 }
 
 .cheesecake-portion-control button {
+    width: 170px;
+    height: 40px;
+    font-size: 1.15rem;
+    border-radius: 0;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
     background: #008000;
     color: #fff;
-    border: none;
-    border-radius: 2px;
-    padding: 8px 24px;
-    font-size: 16px;
+    border: 2px solid #008000;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
     cursor: pointer;
+}
+
+.cheesecake-portion-control button:hover {
+    background: #005c00;
+    transform: scale(1.05);
 }
 
 .cheesecake-ingredients-list {
@@ -720,9 +779,9 @@ footer {
 .cheesecake-ingredients-list li {
     background: #f3f3f3;
     border-radius: 8px;
-    padding: 10px 16px;
+    padding: 14px 18px;
     margin-bottom: 8px;
-    font-size: 17px;
+    font-size: 1.15rem;
     color: #222;
     transition: background 0.2s;
     width: 100%;
@@ -838,6 +897,9 @@ footer {
     padding: 32px 24px;
     margin-top: 48px;
     margin-bottom: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
 }
 
 .impressum-container h1, .datenschutz-container h1 {
@@ -909,5 +971,12 @@ footer {
 
 .back-button:hover {
     background: #005c00;
+}
+
+@media (max-width: 600px) {
+    .impressum-container, .datenschutz-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
 

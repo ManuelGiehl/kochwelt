@@ -26,7 +26,7 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div id="menuButton" class="menu">
+                <div id="menuButton" class="menu d-none">
                     <a href="index.html">Start</a>
                     <a href="cheesecake.html">Rezept des Tages</a>
                     <a href="contact.html">Kontakt</a>
@@ -35,147 +35,59 @@
             </nav>
             <div class="header-shadow"></div>
         </header>
-          <main>
-            <div class="strawberrycake-all">
-                <h1 class="strawberrycake-h1">Erdbeerkuchen</h1>
-                <img src="./img/erdbeerkuchen.jpg" class="strawberrycake-main-img">
-
-
-                <div class="strawberrycake-icon-data">
-                    <div class="strawberrycake-icon-container">
-                        <img src="./img/clock-regular.svg">
-                        <span>40 Min.</span>
-                    </div>
-                    <div class="strawberrycake-icon-container">
-                        <img src="./img/brain-solid.svg">
-                        <span>Normal</span>
-                    </div>
-                    <div class="strawberrycake-icon-container">
-                        <img src="./img/calendar-alt-regular.svg">
-                        <span>18.06.2025</span>
+        <main>
+            <section class="cheesecake-detail">
+                <h1>Erdbeerkuchen</h1>
+                <img class="cheesecake-detail-hero" src="img/erdbeerkuchen.jpg" alt="Erdbeerkuchen">
+                <div class="cheesecake-detail-info">
+                    <span class="cheesecake-meta"><img src="img/icons/clock-regular.svg" alt="Zeit"> 40 Min.</span>
+                    <span class="cheesecake-meta"><img src="img/icons/brain-solid.svg" alt="Schwierigkeit"> normal</span>
+                    <span class="cheesecake-meta"><img src="img/icons/calendar-alt-regular.svg" alt="Datum"> 18.06.2025</span>
+                </div>
+                
+                <div class="cheesecake-portion-control">
+                    <label for="portionInput">Zutaten für </label>
+                    <input id="portionInput" type="number" min="1" value="1">
+                    <button id="portionBtn" type="button">Portionen</button>
+                </div>
+                <ul class="cheesecake-ingredients-list">
+                    <li>125g Zucker</li>
+                    <li>½ Pck. Vanillezucker</li>
+                    <li>2 Eier</li>
+                    <li>60ml Öl</li>
+                    <li>75ml Orangenlimonade</li>
+                    <li>125g Mehl</li>
+                    <li>1½ TL Backpulver (gehäuft)</li>
+                    <li>300ml Sahne</li>
+                    <li>200ml Schmand</li>
+                    <li>1 Pck. Vanillezucker</li>
+                    <li>1 Pck. Cremepulver (Paradiescreme Vanille)</li>
+                    <li>¾ kg Erdbeeren</li>
+                    <li>½ Pck. Tortenguss rot</li>
+                    <li>Wasser (nach Bedarf)</li>
+                </ul>
+                <h2>Zubereitung</h2>
+                <div class="cheesecake-detail-info">
+                    <span class="cheesecake-meta"><img src="img/icons/clock-regular.svg" alt="Zeit"> Gesamtzeit: ca. 2 Stunden 5 Minuten</span>
+                </div>
+                <ol class="cheesecake-preparation">
+                    <li>Die Mengen sind für eine 26er Springform. Für ein Blech die Zutaten verdoppeln.</li>
+                    <li>Für den Boden die Eier mit dem Zucker und dem Vanillezucker verrühren. Öl, Orangenlimonade, Mehl und Backpulver hinzufügen.</li>
+                    <li>Den Teig in der mit Backpapier ausgelegten Springform verteilen und bei 180°C Ober-/Unterhitze im vorgeheizten Ofen 25 Minuten backen.</li>
+                    <li>Für den Belag die Sahne mit dem Cremepulver und Vanillezucker 3 Minuten schlagen (die Masse wird relativ fest). Den Schmand unterheben.</li>
+                    <li>Die Vanillecreme auf den erkalteten Boden streichen.</li>
+                    <li>Die gewaschenen und entstielten Erdbeeren (große sollten halbiert werden) auf der Vanillecreme verteilen.</li>
+                    <li>Den Tortenguss nach Packungsanweisung mit dem Wasser anrühren, kochen und anschließend über den Erdbeeren verteilen. Fest werden lassen.</li>
+                </ol>
+                <div class="cheesecake-author-section">
+                    <h3>Rezept erstellt von</h3>
+                    <div class="cheesecake-author">
+                        <img src="img/profile.png" alt="Profilbild">
+                        <span>Marcel</span>
                     </div>
                 </div>
+            </section>
         </main>
-
-        <section class="strawberrycake-ingredients-container">
-            <div class="strawberrycake-portions-field">
-                <label for="portionsInput">Zutaten für</label>
-                <input type="number" id="portionsInput" value="1" min="1">
-                <button onclick="aktualisiereZutaten()">Portionen</button>
-            </div>
-            <span class="strawberrycake-span-ingredients">Für den Boden:</span>
-            <ul class="ingredients-list">
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">125 g</span>
-                    <span>Zucker</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">&frac12 Pck.</span>
-                    <span>Vanillezucker</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">2</span>
-                    <span>Eier</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">60 ml</span>
-                    <span>Öl</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">75 ml</span>
-                    <span>Orangenlimonade</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">125 g</span>
-                    <span>Mehl</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">1 &frac12 TL, gehäuft</span>
-                    <span>Backpulver</span>
-                </li>
-            </ul>
-            <span class="strawberrycake-span-ingredients">Für den Belag:</span>
-            <ul class="ingredients-list">
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">300 ml</span>
-                    <span>Sahne</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">200 ml</span>
-                    <span>Schmand</span>
-                    </tr>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">1 Pck.</span>
-                    <span>Vanillezucker</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">1 Pck.</span>
-                    <span>Cremepulver &#040Paradiescreme Vanille&#41</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">&frac34 kg</span>
-                    <span>Erdbeeren</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">&frac12 Pck.</span>
-                    <span>Tortenguss rot</span>
-                </li>
-                <li class="ingredients-div">
-                    <span class="strawberrycake-ingredients-crowd">n. B.</span>
-                    <spa">Wasser</span>
-                </li>
-            </ul>
-        </section>
-
-        <section class="strawberrycake-preparation">
-            <h2 class="strawberrycake-h2">Zubereitung</h2>
-
-            <div class="strawberrycake-preparation-icons">
-                <div class="strawberrycake-preparation-icons-time">
-                    <img src="./img/clock-regular.svg">
-                    <span>Arbeitszeit ca. 40 Minuten</span>
-                </div>
-                <div class="strawberrycake-preparation-icons-time">
-                    <img src="./img/clock-regular.svg">
-                    <span>Ruhezeit ca. 1 Stunde</span>
-                </div>
-                <div class="strawberrycake-preparation-icons-time">
-                    <img src="./img/clock-regular.svg">
-                    <span>Koch-/Backzeit ca. 25 Minuten</span>
-                </div>
-                <div class="strawberrycake-preparation-icons-time">
-                    <img src="./img/clock-regular.svg">
-                    <span>Gesamtzeit ca. 2 Stunden 5 Minuten</span>
-                </div>
-            </div>
-
-
-            <p>Die Mengen in der Zutatenliste sind für eine 26er Springform. Für ein Blech die Zutaten verdoppeln.
-                <br>
-                <br>
-                Für den Boden die Eier mit dem Zucker und dem Vanillezucker verrühren. Öl, Orangenlimonade, Mehl und
-                Backpulver hinzufügen. Den Teig in der mit Backpapier ausgelegten Springform verteilen und bei 180 °C
-                Ober-/Unterhitze im vorgeheizten Ofen 25 Minuten backen.
-                <br>
-                <br>
-                Für den Belag die Sahne mit dem Cremepulver und Vanillezucker 3 Minuten schlagen (die Masse wird relativ
-                fest). Den Schmand unterheben und die Vanillecreme auf den erkalteten Boden streichen.
-                <br>
-                <br>
-                Die gewaschenen und entstielten Erdbeeren (große sollten halbiert werden) auf der Vanillecreme
-                verteilen.
-                Den Tortenguss nach Packungsanweisung mit dem Wasser anrühren, kochen und anschließend über den
-                Erdbeeren
-                verteilen. Fest werden lassen und dann ist der Kuchen servierfertig.
-            </p>
-
-            <h3 class="strawberrycake-h3">Rezept erstellt von</h3>
-
-            <div class="strawberrycake-profil-container">
-                <img src="./img/profile.png">
-                <span>Marcel</span>
-            </div>
-        </section>
     </div>
     <footer>
         <p>© 2025 Kochwelt</p>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | Kochwelt</title>
+    <title>Nachricht gesendet | Kochwelt</title>
     <link rel="icon" type="img/png" href="./img/logo_small.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -34,22 +34,12 @@
         <div class="header-shadow"></div>
     </header>
     <main>
-      <div class="contact-container">
-        <h1>Kontakt</h1>
-        <form class="contact-form" action="https://formspree.io/f/xkgbqkvy" method="POST" autocomplete="off">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required autocomplete="off" />
-
-          <label for="email">E-Mail:</label>
-          <input type="email" id="email" name="email" required autocomplete="off" />
-
-          <label for="message">Nachricht:</label>
-          <textarea id="message" name="message" rows="4" required autocomplete="off"></textarea>
-
-          <input type="hidden" name="_next" value="success.html">
-
-          <button type="submit">Absenden</button>
-        </form>
+      <div class="success-container">
+        <div class="success-content">
+          <h1>E-Mail erfolgreich versendet!</h1>
+          <p>Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.</p>
+          <button onclick="window.location.href='index.html'" class="back-button">Zurück zur Startseite</button>
+        </div>
       </div>
     </main>
   </div>
@@ -57,4 +47,4 @@
     <p>© 2025 Kochwelt</p>
   </footer>
 </body>
-</html>
+</html> 

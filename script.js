@@ -23,4 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'cheesecake.html';
         });
     }
+    
+    // Kontaktformular Event-Listener
+    var contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Formspree wird das Formular automatisch verarbeiten
+            // Nach erfolgreichem Absenden wird zur Erfolgsseite weitergeleitet
+            setTimeout(function() {
+                window.location.href = 'success.html';
+            }, 100);
+        });
+    }
 });

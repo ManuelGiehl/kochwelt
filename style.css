@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -41,7 +42,10 @@ body {
     }
 }
 
-header, main, .recipes, .cheesecake {
+header,
+main,
+.recipes,
+.cheesecake {
     padding-left: 0;
     padding-right: 0;
 }
@@ -285,6 +289,7 @@ nav {
         object-fit: contain;
         margin: 12px;
     }
+
     .logo-large {
         display: none;
     }
@@ -321,12 +326,14 @@ nav {
         cursor: pointer;
         margin-left: auto;
     }
+
     .line {
         width: 32px;
         height: 4px;
         background: #222;
         border-radius: 2px;
     }
+
     .menu {
         display: none;
         flex-direction: column;
@@ -334,15 +341,17 @@ nav {
         top: 110px;
         right: 24px;
         background: white;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
         min-width: 180px;
         z-index: 100;
         gap: 0;
     }
+
     .menu:not(.d-none) {
         display: flex;
     }
+
     .menu a {
         font-size: 18px;
         padding: 12px 0;
@@ -360,9 +369,11 @@ nav {
         box-shadow: none;
         border-radius: 0;
     }
+
     .menu.d-none {
         display: flex !important;
     }
+
     .menu-icon {
         display: none;
     }
@@ -387,6 +398,7 @@ nav {
         align-items: center;
         gap: 40px;
     }
+
     .cheesecake-image {
         flex: 0 1 40vw;
         max-width: 400px;
@@ -395,12 +407,14 @@ nav {
         align-items: center;
         justify-content: center;
     }
+
     .cheesecake-image img {
         width: 100%;
         height: auto;
         max-width: 100%;
         min-width: 0;
     }
+
     .cheesecake-content {
         flex: 1 1 0;
         min-width: 120px;
@@ -408,12 +422,15 @@ nav {
         flex-direction: column;
         justify-content: center;
     }
+
     .cheesecake-content h1 {
         font-size: clamp(24px, 2.5vw, 40px);
     }
+
     .cheesecake-content p {
         font-size: clamp(14px, 1.2vw, 22px);
     }
+
     .cheesecake-content button {
         align-self: flex-start;
         margin-top: 32px;
@@ -428,6 +445,7 @@ nav {
         align-items: flex-start;
         gap: 60px;
     }
+
     .cheesecake-image {
         flex: 0 1 40vw;
         max-width: 550px;
@@ -436,6 +454,7 @@ nav {
         align-items: center;
         justify-content: center;
     }
+
     .cheesecake-image img {
         width: 100%;
         height: auto;
@@ -449,12 +468,14 @@ nav {
         width: clamp(80px, 70vw, 350px);
         height: auto;
     }
+
     .cheesecake {
         flex-direction: column;
         align-items: center;
         gap: 24px;
         margin-top: 56px;
     }
+
     .cheesecake-image {
         width: 100%;
         max-width: 100%;
@@ -464,6 +485,7 @@ nav {
         align-items: center;
         justify-content: center;
     }
+
     .cheesecake-image img {
         width: clamp(320px, 100vw, 900px);
         height: auto;
@@ -472,6 +494,7 @@ nav {
         border-radius: 16px;
         display: block;
     }
+
     .cheesecake-content {
         width: 100%;
         min-width: 0;
@@ -482,6 +505,7 @@ nav {
         margin: 0;
         padding: 0 8px;
     }
+
     .cheesecake-content h1 {
         font-size: clamp(26px, calc(26px + (12 * (100vw - 320px) / 580)), 38px);
         text-align: center;
@@ -492,6 +516,7 @@ nav {
         width: 100%;
         display: block;
     }
+
     .cheesecake-content p {
         font-size: clamp(16px, calc(16px + (4 * (100vw - 320px) / 580)), 20px);
         text-align: center;
@@ -499,6 +524,7 @@ nav {
         color: #000;
         margin: 0 0 16px 0;
     }
+
     .cheesecake-content button {
         align-self: center;
         background-color: #008000;
@@ -526,6 +552,7 @@ nav {
         align-items: stretch;
         gap: 40px;
     }
+
     .chocolate-cake,
     .strawberry-cake,
     .carrot-cake {
@@ -536,6 +563,7 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+
     .chocolate-cake img,
     .strawberry-cake img,
     .carrot-cake img {
@@ -544,6 +572,7 @@ nav {
         min-width: 120px;
         object-fit: cover;
     }
+
     .chocolate-cake h3,
     .strawberry-cake h3,
     .carrot-cake h3 {
@@ -554,6 +583,7 @@ nav {
 }
 
 @media (max-width: 460px) {
+
     .chocolate-cake img,
     .strawberry-cake img,
     .carrot-cake img {
@@ -563,6 +593,7 @@ nav {
         height: clamp(120px, 60vw, 300px);
         object-fit: cover;
     }
+
     .chocolate-cake h3,
     .strawberry-cake h3,
     .carrot-cake h3 {
@@ -570,6 +601,7 @@ nav {
         margin-top: 8px;
         margin-bottom: 16px;
     }
+
     .recipes h2 {
         font-size: clamp(16px, 7vw, 36px);
         font-weight: 500;
@@ -638,6 +670,7 @@ nav {
         align-items: center;
         gap: 24px;
     }
+
     .cake-vs-torte-image {
         margin-top: 24px;
     }
@@ -655,7 +688,7 @@ footer {
     max-width: 1440px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -737,7 +770,7 @@ footer {
     font-size: 1.15rem;
     text-align: left;
     border-radius: 8px;
-    border: 2px solid rgba(0,0,0,0.13);
+    border: 2px solid rgba(0, 0, 0, 0.13);
     border-right: none;
     box-sizing: border-box;
     outline: none;
@@ -838,7 +871,7 @@ footer {
     margin: 48px auto 48px auto;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     padding: 32px 24px;
 }
 
@@ -859,7 +892,8 @@ footer {
     font-weight: 500;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 18px;
@@ -889,11 +923,12 @@ footer {
     background: #005c00;
 }
 
-.impressum-container, .datenschutz-container {
+.impressum-container,
+.datenschutz-container {
     width: 100%;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     padding: 32px 24px;
     margin-top: 48px;
     margin-bottom: 48px;
@@ -902,18 +937,23 @@ footer {
     box-sizing: border-box;
 }
 
-.impressum-container h1, .datenschutz-container h1 {
+.impressum-container h1,
+.datenschutz-container h1 {
     font-size: 32px;
     margin-bottom: 24px;
 }
 
-.impressum-container h2, .datenschutz-container h2 {
+.impressum-container h2,
+.datenschutz-container h2 {
     font-size: 22px;
     margin-top: 32px;
     margin-bottom: 12px;
 }
 
-.impressum-container p, .datenschutz-container p, .impressum-container li, .datenschutz-container li {
+.impressum-container p,
+.datenschutz-container p,
+.impressum-container li,
+.datenschutz-container li {
     font-size: 17px;
     color: #222;
     margin-bottom: 12px;
@@ -940,7 +980,7 @@ footer {
     margin: 48px auto 48px auto;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     padding: 32px 24px;
     text-align: center;
 }
@@ -974,9 +1014,22 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .impressum-container, .datenschutz-container {
+
+    .impressum-container,
+    .datenschutz-container {
         padding-left: 12px;
         padding-right: 12px;
     }
 }
 
+@media (max-width: 600px) {
+    #portionInput {
+        width: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cheesecake-portion-control {
+        flex-wrap: wrap;
+    }
+}

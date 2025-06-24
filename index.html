@@ -16,13 +16,21 @@
   <div class="site-container">
     <header>
         <a href="index.html">
-            <img src="./img/logo.png">
+            <img class="logo-small" src="./img/logo_small.png" alt="Kochwelt Logo Small">
+            <img class="logo-large" src="./img/logo.png" alt="Kochwelt Logo Large">
         </a>
         <nav>
-            <a href="">Start</a>
-            <a href="cheesecake.html">Rezept des Tages</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="impressum.html">Impressum</a>
+            <div onclick="toggleMenu()" class="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="menuButton" class="menu">
+                <a href="index.html">Start</a>
+                <a href="cheesecake.html">Rezept des Tages</a>
+                <a href="contact.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
         </nav>
         <div class="header-shadow"></div>
     </header>
@@ -35,8 +43,7 @@
                 <h1>American Cheesecake</h1>
                 <p>Der cremige American Cheesecake ist ein beliebter Klassiker aus den USA.
                     Mit seinem knusprigen Keksboden und der feinen Frischkäsefüllung lässt er
-                    sich ganz einfach selbst zubereiten. In etwa 30 Minuten Vorbereitungszeit
-                    zauberst du ein herrlich süßes Dessert für jede Gelegenheit.</p>  
+                    sich ganz einfach selbst zubereiten. </p>  
                
                     <button id="cheesecakeBtn">Rezept öffnen</button>
             </div>

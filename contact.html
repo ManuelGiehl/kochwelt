@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,28 +15,36 @@
   <div class="site-container">
     <header>
         <a href="index.html">
-            <img src="./img/logo.png" alt="Kochwelt Logo">
+            <img class="logo-small" src="./img/logo_small.png" alt="Kochwelt Logo Small">
+            <img class="logo-large" src="./img/logo.png" alt="Kochwelt Logo Large">
         </a>
         <nav>
-            <a href="index.html">Start</a>
-            <a href="cheesecake.html">Rezept des Tages</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="impressum.html">Impressum</a>
+            <div onclick="toggleMenu()" class="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="menuButton" class="menu">
+                <a href="index.html">Start</a>
+                <a href="cheesecake.html">Rezept des Tages</a>
+                <a href="contact.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
         </nav>
         <div class="header-shadow"></div>
     </header>
     <main>
       <div class="contact-container">
         <h1>Kontakt</h1>
-        <form class="contact-form" action="mailto:manuzcore1@gmail.com" method="POST" enctype="text/plain">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+        <form class="contact-form" action="https://formspree.io/f/xkgbqkvy" method="POST" autocomplete="off">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required autocomplete="off" />
 
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" required>
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email" required autocomplete="off" />
 
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="message">Nachricht:</label>
+          <textarea id="message" name="message" rows="4" required autocomplete="off"></textarea>
 
           <button type="submit">Absenden</button>
         </form>

@@ -63,8 +63,6 @@ main {
     font-size: 24px;
     font-weight: 400;
     color: #000;
-
-   
 }
 
 .cheesecake-content a {
@@ -79,15 +77,6 @@ main {
     align-items: center;
     gap: 40px;
     margin-top: 120px;
-}
-
-.cheesecake-image img {
-    max-width: 550px;
-    min-width: 0;
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
-    display: block;
 }
 
 button {
@@ -194,7 +183,6 @@ header {
 nav a {
     text-decoration: none;
     font-size: 24px;
-    justify-content: space-evenly;
     padding-left: 12px;
     padding-right: 12px;
     color: black;
@@ -208,6 +196,18 @@ nav a:hover {
 
 nav {
     padding-bottom: 12px;
+}
+
+.site-container header img {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.site-container header img:hover {
+    opacity: 0.8;
 }
 
 .header-shadow {
@@ -226,17 +226,128 @@ nav {
     max-width: 100%;
 }
 
-/* Standard: Spalte (mobile & tablet) */
-.cheesecake {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-top: 120px;
+.logo-small {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
 }
 
-/* Ab 900px: Reihe, alles skaliert mit */
-@media (min-width: 900px) {
+.logo-large {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: auto;
+}
+
+@media (max-width: 460px) {
+    .logo-small {
+        display: flex;
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        margin: 12px;
+    }
+    .logo-large {
+        display: none;
+    }
+}
+
+@media (max-width: 1040px) {
+    .logo-large {
+        width: 320px;
+        height: auto;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width: 971px) {
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        background: #efefef;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .line {
+        width: 32px;
+        height: 4px;
+        background: #222;
+        border-radius: 2px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        right: 24px;
+        background: white;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        min-width: 180px;
+        z-index: 100;
+        gap: 0;
+    }
+    .menu:not(.d-none) {
+        display: flex;
+    }
+    .menu a {
+        font-size: 18px;
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 972px) {
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .d-none {
+        display: flex !important;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.cheesecake-image img {
+    max-width: 550px;
+    min-width: 0;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 901px) {
     .cheesecake {
         flex-direction: row;
         align-items: center;
@@ -277,78 +388,101 @@ nav {
     }
 }
 
-/* Desktop: Reihe */
 @media (min-width: 1068px) {
-    .cheesecake,
-    .recipe-list {
+    .cheesecake {
         flex-direction: row;
         align-items: flex-start;
         gap: 60px;
     }
+    .cheesecake-image {
+        flex: 0 1 40vw;
+        max-width: 550px;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-image img {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+        min-width: 0;
+    }
 }
 
-/* Text- und Button-Zentrierung auf Tablet */
-@media (min-width: 768px) and (max-width: 1067px) {
-    .cheesecake-content {
-        text-align: center;
+@media (max-width: 900px) {
+    header img {
+        width: clamp(80px, 70vw, 350px);
+        height: auto;
+    }
+    .cheesecake {
+        flex-direction: column;
         align-items: center;
+        gap: 24px;
+        margin-top: 56px;
+    }
+    .cheesecake-image {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheesecake-image img {
+        width: clamp(320px, 100vw, 900px);
+        height: auto;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+    }
+    .cheesecake-content {
+        width: 100%;
+        min-width: 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0 8px;
+    }
+    .cheesecake-content h1 {
+        font-size: clamp(26px, calc(26px + (12 * (100vw - 320px) / 580)), 38px);
+        text-align: center;
+        font-weight: 500;
+        color: #000;
+        margin-top: 0;
+        margin-bottom: 8px;
+        width: 100%;
+        display: block;
+    }
+    .cheesecake-content p {
+        font-size: clamp(16px, calc(16px + (4 * (100vw - 320px) / 580)), 20px);
+        text-align: center;
+        font-weight: 400;
+        color: #000;
+        margin: 0 0 16px 0;
     }
     .cheesecake-content button {
-        margin-left: auto;
-        margin-right: auto;
+        align-self: center;
+        background-color: #008000;
+        color: #fff;
+        font-size: clamp(16px, 4vw, 22px);
+        padding: clamp(10px, 2vw, 18px) clamp(32px, 8vw, 80px);
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-top: 24px;
     }
 }
 
-@media (max-width: 767px) {
-    header {
-        flex-direction: row;
-        align-items: flex-end;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        gap: 16px;
-        min-height: 90px;
-    }
-    .site-container header img {
-        padding-left: 24px;
-        margin-bottom: 0;
-        margin-left: 0;
-        position: relative;
-        z-index: 2;
-    }
-    nav {
-        padding-bottom: 0;
-    }
-    nav a {
-        display: block;
-        padding: 8px 0;
-        font-size: 20px;
-    }
-}
-
-.site-container header img {
-    box-sizing: border-box;
-    position: relative;
-    width: 320px;
-    z-index: 2;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.site-container header img:hover {
-    opacity: 0.8;
-}
-
-@media (min-width: 320px) and (max-width: 1067px) {
-    nav {
-        display: none;
-    }
-}
-
-@media (min-width: 1068px) {
-    nav {
-        display: flex;
+@media (max-width: 1067px) {
+    .recipe-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
     }
 }
 
@@ -383,97 +517,6 @@ nav {
         margin-top: 8px;
         margin-bottom: 24px;
     }
-    .cheesecake-image {
-        flex: 0 1 40vw;
-        max-width: 550px;
-        min-width: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-image img {
-        width: 100%;
-        height: auto;
-        max-width: 550px;
-        min-width: 0;
-    }
-}
-
-@media (max-width: 1439px) {
-    .cheesecake-content p {
-        font-size: clamp(16px, 2vw, 24px);
-    }
-}
-
-@media (min-width: 1440px) {
-    .cheesecake-content p {
-        font-size: clamp(16px, 1.5vw, 22px);
-    }
-    .cheesecake-content h1 {
-        font-size: clamp(28px, 3vw, 40px);
-    }
-    .cheesecake-content button {
-        font-size: clamp(16px, 1.5vw, 22px);
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 1067px) {
-    .cheesecake {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    .cheesecake-image {
-        max-width: 400px;
-        width: 100%;
-        min-width: 0;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-image img {
-        width: 100%;
-        max-width: 400px;
-        min-width: 0;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-    .cheesecake-content {
-        width: 100%;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-content h1,
-    .cheesecake-content p {
-        text-align: center;
-    }
-    .cheesecake-content button {
-        align-self: center;
-    }
-    .recipe-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-}
-
-@media (min-width: 1068px) and (max-width: 1439px) {
-    .cheesecake-content p {
-        font-size: 22px;
-    }
-    .cheesecake-content h1 {
-        font-size: 40px;
-    }
-    .cheesecake-content button {
-        font-size: 22px;
-        margin-top: 40px;
-    }
 }
 
 @media (max-width: 460px) {
@@ -493,7 +536,6 @@ nav {
         margin-top: 8px;
         margin-bottom: 16px;
     }
-    
     .recipes h2 {
         font-size: clamp(16px, 7vw, 36px);
         font-weight: 500;
@@ -505,185 +547,221 @@ nav {
     }
 }
 
-.header-shadow {
-    z-index: 1;
-}
-
-@media (max-width: 900px) {
-    header img {
-        width: clamp(80px, 70vw, 350px);
-        height: auto;
-    }
-}
-
-/* CSS Teilabschnitt Mohamed */
 .cake-vs-torte {
-  margin-top: 110px;
-  padding-top: 24px;
-  padding-bottom: 64px;
+    margin-top: 110px;
+    padding-top: 24px;
+    padding-bottom: 64px;
 }
 
 .cake-vs-torte-header {
-  text-align: center;
-  margin-bottom: 48px;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
 .cake-vs-torte-title {
-  font-size: 36px;
-  font-weight: 500;
-  color: #000;
-  margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
 }
 
 .cake-vs-torte-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .cake-vs-torte-text {
-  flex: 1;
-  padding-top: 24px;
+    flex: 1;
+    padding-top: 24px;
 }
 
 .cake-vs-torte-text p {
-  font-size: 22px;
-  font-weight: 400;
-  color: #000;
-  text-align: left;
-  line-height: 1.4;
-  margin: 0;
-
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .cake-vs-torte-image {
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .cake-torte-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 16px;
-  object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .cake-vs-torte-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .cake-vs-torte-image {
+        margin-top: 24px;
+    }
 }
 
 footer {
-  background-color: #403b3b;
-  width: 100%;
-  padding: 40px 0;
-  color: white;
-  text-align: center;
-}
-
-/* Cheesecake CSS */
-.cheesecake-content {
-    margin-top: 0;
-    padding-top: 0;
-    display: block;
-}
-
-.cheesecake-content h1 {
-    font-size: 40px;
-    font-weight: 500;
-    color: #000;
-    margin-top: 0;
-    margin-bottom: 8px;
+    background-color: #403b3b;
     width: 100%;
-    display: block;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
 }
 
-.cheesecake-content p {
-    font-size: 24px;
-    font-weight: 400;
-    color: #000;
-}
-
-.cheesecake-content a {
-    display: inline-block;
-    width: auto;
-    max-width: none;
-}
-
-.cheesecake {
+.cheesecake-detail {
+    max-width: 1440px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-top: 120px;
+    align-items: flex-start;
+    padding-top: 48px;
 }
 
-.cheesecake-image img {
-    max-width: 550px;
-    min-width: 0;
-    height: auto;
-    border-radius: 16px;
+.cheesecake-detail-hero {
+    width: 100%;
+    max-width: 1440px;
+    height: 260px;
     object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
     display: block;
+    margin-bottom: 24px;
 }
 
-.cheesecake-info {
+.cheesecake-detail h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.cheesecake-detail-info {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
+    gap: 18px;
     margin-bottom: 16px;
-    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cheesecake-detail-info .cheesecake-meta {
+    background: #f3f3f3;
+    border-radius: 16px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    min-width: 90px;
+}
+
+.cheesecake-meta img,
+.cheesecake-meta svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    object-fit: contain;
+    display: inline-block;
 }
 
 .cheesecake-meta {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
     font-size: 16px;
-    max-width: 100%;
-    white-space: nowrap;
+    line-height: 1;
 }
 
-.cheesecake-meta img,
-.cheesecake-meta svg {
-    width: 18px !important;
-    height: 18px !important;
-    min-width: 18px;
-    min-height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    object-fit: contain;
-    display: inline-block;
+.cheesecake-portion-control {
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: flex-start;
 }
 
-.cheesecake-ingredients {
-    font-size: 20px;
-    line-height: 2;
+.cheesecake-portion-control input[type="number"] {
+    width: 48px;
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.cheesecake-portion-control button {
+    background: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cheesecake-ingredients-list {
     margin-bottom: 32px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.cheesecake-ingredients-list li {
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    color: #222;
+    transition: background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.cheesecake-ingredients-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cheesecake-ingredients-list li:nth-child(odd) {
+    background: #f3f3f3;
+}
+
+.cheesecake-ingredients-list li:nth-child(even) {
+    background: #fff;
 }
 
 .cheesecake-preparation {
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     font-size: 17px;
     color: #222;
-    margin-left: 0;
-    padding-left: 0;
-    list-style-position: inside;
-    line-height: 1.6;
 }
 
 .cheesecake-author-section {
-    margin-top: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
-.cheesecake-author-inner {
+    border-radius: 8px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 48px;
 }
 
 .cheesecake-author {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-top: 8px;
 }
 
 .cheesecake-author img {
@@ -696,677 +774,101 @@ footer {
     font-size: 20px;
 }
 
-@media (min-width: 900px) {
-    .cheesecake {
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-    }
-    .cheesecake-image {
-        flex: 0 1 40vw;
-        max-width: 400px;
-        min-width: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-image img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        min-width: 0;
-    }
-    .cheesecake-content {
-        flex: 1 1 0;
-        min-width: 120px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .cheesecake-content h1 {
-        margin-bottom: 8px;
-    }
-    .cheesecake-info {
-        margin-bottom: 16px;
-    }
-    .cheesecake-content p {
-        font-size: clamp(14px, 1.2vw, 22px);
-    }
-    .cheesecake-content button {
-        align-self: flex-start;
-        margin-top: 32px;
-        font-size: clamp(14px, 1.2vw, 22px);
-        padding: 14px 40px;
-    }
-}
-
-@media (min-width: 1068px) {
-    .cheesecake {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 60px;
-    }
-    .cheesecake-image {
-        flex: 0 1 40vw;
-        max-width: 550px;
-        min-width: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-image img {
-        width: 100%;
-        height: auto;
-        max-width: 550px;
-        min-width: 0;
-    }
-}
-
-@media (max-width: 1439px) {
-    .cheesecake-content p {
-        font-size: clamp(16px, 2vw, 24px);
-    }
-}
-
-@media (min-width: 1440px) {
-    .cheesecake-content p {
-        font-size: clamp(16px, 1.5vw, 22px);
-    }
-    .cheesecake-content h1 {
-        font-size: clamp(28px, 3vw, 40px);
-    }
-    .cheesecake-content button {
-        font-size: clamp(16px, 1.5vw, 22px);
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 1067px) {
-    .cheesecake {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    .cheesecake-image {
-        max-width: 400px;
-        width: 100%;
-        min-width: 0;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-image img {
-        width: 100%;
-        max-width: 400px;
-        min-width: 0;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-    .cheesecake-content {
-        width: 100%;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .cheesecake-content h1,
-    .cheesecake-content p {
-        text-align: center;
-    }
-    .cheesecake-content button {
-        align-self: center;
-    }
-}
-
-@media (min-width: 1068px) and (max-width: 1439px) {
-    .cheesecake-content p {
-        font-size: 22px;
-    }
-    .cheesecake-content h1 {
-        font-size: 40px;
-    }
-    .cheesecake-content button {
-        font-size: 22px;
-        margin-top: 40px;
-    }
-}
-
-/* Recipe detail html css */
-.cheesecake-detail {
-  max-width: 1440px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 48px
-}
-.cheesecake-detail-image img {
-  width: 100%;
-  max-width: 1440px;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 0;
-}
-.cheesecake-detail-info,
-.cheesecake-detail-description,
-.cheesecake-portion-control,
-.cheesecake-ingredients-list,
-.cheesecake-preparation,
-.cheesecake-author-section {
-  width: 100%;
-  text-align: left;
-}
-
-.cheesecake-detail h1 {
-    font-size: 36px;
-    font-weight: 500;
-}
-.cheesecake-detail-info {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.cheesecake-detail-info .cheesecake-meta {
-  background: #f3f3f3;
-  border-radius: 16px;
-  padding: 6px 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 15px;
-}
-.cheesecake-portion-control {
-  gap: 8px;
-  margin-bottom: 16px;
-  justify-content: flex-start;
-}
-.cheesecake-portion-control input[type="number"] {
-  width: 48px;
-  padding: 6px;
-  font-size: 16px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  margin: 0 4px;
-}
-.cheesecake-portion-control button {
-  background: #008000;
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  padding: 8px 24px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.cheesecake-ingredients-list {
-  margin-bottom: 32px;
-  padding: 0;
-  list-style: none;
-}
-.cheesecake-ingredients-list li {
-  background: #f3f3f3;
-  border-radius: 8px;
-  padding: 10px 16px;
-  margin-bottom: 8px;
-  font-size: 17px;
-  color: #222;
-  transition: background 0.2s;
-}
-.cheesecake-ingredients-list li:last-child {
-  margin-bottom: 0;
-}
-.cheesecake-ingredients-list li:nth-child(odd) {
-  background: #f3f3f3;
-}
-.cheesecake-ingredients-list li:nth-child(even) {
-  background: #fff;
-}
-.cheesecake-preparation {
-  margin-bottom: 0px;
-  font-size: 17px;
-  color: #222;
-}
-.cheesecake-author-section {
-  border-radius: 8px;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 48px;
-}
-.cheesecake-author {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 8px;
-}
-.cheesecake-author img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-}
-.cheesecake-author span {
-  font-size: 20px;
-}
-
-.cheesecake-detail-hero {
-  width: 100%;
-  max-width: 1440px;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 24px;
-}
-
-/* Contact CSS */
 .contact-container {
-  max-width: 600px;
-  margin: 48px auto 48px auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 32px 24px;
-}
-.contact-container h1 {
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-.contact-form {
-  background: #f3f3f3;
-  border-radius: 12px;
-  padding: 56px;
-}
-.contact-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 18px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-.contact-form button {
-  background: #008000;
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  padding: 12px 32px;
-  font-size: 18px;
-  cursor: pointer;
-}
-.contact-form button:hover {
-  background: #005c00;
-}
-
-/* Impressum CSS */
-.impressum-container, .datenschutz-container {
-  max-width: 800px;
-  margin: 48px auto 48px auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 32px 24px;
-}
-.impressum-container h1, .datenschutz-container h1 {
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-.impressum-container h2, .datenschutz-container h2 {
-  font-size: 22px;
-  margin-top: 32px;
-  margin-bottom: 12px;
-}
-.impressum-container p, .datenschutz-container p, .impressum-container li, .datenschutz-container li {
-  font-size: 17px;
-  color: #222;
-  margin-bottom: 12px;
-}
-.impressum-container address {
-  font-style: normal;
-  margin-bottom: 24px;
-  line-height: 1.7;
-}
-.impressum-link {
-  color: #008000;
-  text-decoration: underline;
-  font-size: 17px;
-}
-.impressum-link:hover {
-  color: #005c00;
-}
-
-
-.main-content-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 320px;
-}
-
-.contact-formular {
-    background-color: #efefef;
-    border-radius: 10px;
-}
-
-.contact-formular h2 {
-    margin: 0;
-    padding-top: 12px;
-    padding-left: 12px;
-    padding-bottom: 24px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.contact-formular label {
-    margin: 0;
-    padding-top: 12px;
-    padding-left: 12px;
-    padding-bottom: 0;
-    font-size: 18px;
-    font-weight: 350;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-formular input {
-    margin-left: 12px;
-    width: 560px;
-    margin-right: 12px;
-    border-radius: 8px;
-    border: none;
-    height: 32px;
-    font-size: 18px;
-}
-
-.contact-formular textarea {
-    margin-left: 12px;
-    width: 560px;
-    margin-right: 12px;
-    border-radius: 8px;
-    border: none;
-    height: 240px;
-    font-size: 18px;
-}
-
-.contact-formular button {
-    background-color: rgb(0, 128, 0);
-    color: white;
-    height: 36px;
-    width: 196px;
-    border-radius: 6px;
-    border: none;
-    font-size: 18px;
-    font-weight: 350;
-}
-
-.contact-formular button:hover {
-    background-color: rgb(77 144 77);
-    cursor: pointer;
-}
-
-
-.button-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 36px;
-    padding-bottom: 24px;
-}
-
-.contact-footer {
-    background-color: rgb(35, 35, 35);
-    display: flex;
-    justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 120px;
-    height: 196px;
-    align-items: center;
-}
-
-.footerLogo-contact img {
-    height: 84px;
-    width: auto;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    filter: invert(100%);
-
-}
-
-
-.social-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
-
-.social-contact img {
-    height: 56px;
-    width: 196px;
-    object-fit: cover;
-}
-
-
-.strawberrycake-main {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-.strawberrycake-main img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
+    max-width: 600px;
+    margin: 48px auto 48px auto;
+    background: #fff;
     border-radius: 12px;
-    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 32px 24px;
 }
 
-.strawberrycake-h1 {
-    font-weight: 600;
-    padding-top: 56px;
-    font-size: 42px;
-
-}
-
-.strawberrycake-icon-data {
-    display: flex;
-    padding-top: 36px;
-    gap: 24px;
-}
-
-.strawberrycake-icon-data img {
-    height: 18px;
-    width: auto;
-}
-
-.strawberrycake-icon-data span {
-    font-size: 20px;
-    font-weight: 350;
-}
-
-.strawberrycake-icon-container {
-    display: flex;
-    gap: 12px;
-    background-color: #efefef;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.strawberrycake-portions-field {
-    margin-top: 76px;
-    background-color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 350;
-    display: flex;
-    border-radius: 8px;
-    border: none;
-    height: 64px;
-    align-items: center;
-}
-
-.strawberrycake-ingredients-container label {
-    padding-right: 18px;
-}
-
-.strawberrycake-ingredients-container input {
-    border-radius: 8px;
-    border: none;
-    height: 38px;
-    font-size: 20px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.strawberrycake-ingredients-container button {
-    height: 42px;
-    width: 194px;
-    font-size: 20px;
-    background-color: rgb(0, 128, 0);
-    color: white;
-    border: none;
-}
-
-.strawberrycake-ingredients-container button:hover {
-    cursor: pointer;
-    background-color: rgb(40, 123, 40);
-}
-
-.strawberrycake-ingredients-container {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-.ingredients-list {
-    padding-inline-start: 0;
-}
-
-.ingredients-div {
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 36px;
-    font-size: 20px;
-    font-weight: 350;
-}
-
-.strawberrycake-ingredients-crowd {
-    width: 240px;
-    padding-right: 16px;
-}
-
-.ingredients-div:nth-child(odd) {
-    background-color: rgb(239, 239, 239);
-}
-
-.ingredients-div:nth-child(even) {
-    background-color: rgb(255, 255, 255);
-}
-
-.strawberrycake-h3 {
-    font-size: 24px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.strawberrycake-preparation {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-.strawberrycake-h2 {
-    font-size: 34px;
-    font-weight: 600;
-    padding-top: 12px;
-}
-
-.strawberrycake-preparation-icons {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.strawberrycake-preparation-icons img {
-    height: 18px;
-}
-
-.strawberrycake-preparation-icons span {
-    font-size: 20px;
-    font-weight: 350;
-}
-
-.strawberrycake-preparation-icons-time {
-    display: flex;
-    gap: 12px;
-    background-color: #efefef;
-    border-radius: 10px;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-right: 36px;
+.contact-container h1 {
+    font-size: 32px;
     margin-bottom: 24px;
 }
 
-.strawberrycake-preparation p {
-    font-size: 20px;
-    font-weight: 350;
-    padding-top: 36px;
-    padding-bottom: 68px;
-    margin: 0;
+.contact-form {
+    background: #f3f3f3;
+    border-radius: 12px;
+    padding: 56px;
 }
 
-.strawberrycake-profil-container img {
-    height: 96px;
-    border-radius: 48px;
-    margin-top: 24px;
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
-.strawberrycake-profil-container {
-    display: flex;
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
 }
 
-.strawberrycake-profil-container span {
-    font-size: 24px;
-    font-weight: 350;
-    display: flex;
-    align-items: center;
-    padding-left: 36px;
-    margin-top: 24px;
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
-.strawberrycake-footer {
-    background-color: rgb(64, 59, 59);
-    height: 240px;
-    margin-top: 136px;
+.contact-form button {
+    background: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 32px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #005c00;
+}
+
+.impressum-container, .datenschutz-container {
+    max-width: 800px;
+    margin: 48px auto 48px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 32px 24px;
+}
+
+.impressum-container h1, .datenschutz-container h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.impressum-container h2, .datenschutz-container h2 {
+    font-size: 22px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.impressum-container p, .datenschutz-container p, .impressum-container li, .datenschutz-container li {
+    font-size: 17px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.impressum-container address {
+    font-style: normal;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.impressum-link {
+    color: #008000;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.impressum-link:hover {
+    color: #005c00;
 }
 

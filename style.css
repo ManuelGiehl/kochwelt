@@ -326,7 +326,7 @@ nav {
         box-shadow: none;
         border-radius: 0;
     }
-    .d-none {
+    .menu.d-none {
         display: flex !important;
     }
     .menu-icon {

@@ -310,6 +310,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 8px;
 }
 
 @media (max-width: 971px) {
@@ -354,7 +355,8 @@ nav {
 
     .menu a {
         font-size: 18px;
-        padding: 12px 0;
+        padding: 4px;
+        margin: 8px;
         text-align: center;
     }
 }
